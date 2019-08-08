@@ -39,7 +39,7 @@
 clear
 echo "Linux Journal Emergency Downloader in PDF"
 echo "-----------------------------------------"
-echo "" #BSD users, macOS users with coreutils can run this script, GNU/Linux must replace L58.
+echo ""
 echo "This script will create temporary files : numerous .txt and numerous .PDF"
 echo "" #Dépendencies : lynx, (ghead for BSD systems), weasyprint.
 
@@ -92,7 +92,7 @@ while read LINE_A; do
   echo "--------------------------------------------------"
   echo " We are downloading issue $INDEX of Linux Journal…"
   echo ""
-  weasyprint $LINE_A 0_$INDEX.pdf
+  weasyprint $LINE_A 0-$INDEX.pdf
   lynx -dump -listonly -nonumbers "$LINE_A" >> url_article_$INDEX.txt
   
   #Suppress the first line : no interest
@@ -100,11 +100,12 @@ while read LINE_A; do
   mv tmp.txt url_article_$INDEX.txt
   
   #Suppress the two last lines : no interest
-  #Suppress the two last lines : no interest
   if [ "$(uname)" == "Darwin" ]; then
-    ghead -n -2 url_of_issues.txt > tmp.txt	   
+  	echo "Mac"
+    ghead -n -2 url_article_$INDEX.txt > tmp.txt	   
   elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    head -n -2 url_of_issues.txt > tmp.txt
+  	echo "Linux"
+    head -n -2 url_article_$INDEX.txt > tmp.txt
   fi
   
   #Here we do most of the job for every article in each issue:
@@ -112,7 +113,16 @@ while read LINE_A; do
   while read LINE_B; do
     # Downloading every article in PDF
     echo " We are downloading this article : $LINE_B from issue $INDEX"
-    weasyprint "$LINE_B" "$COUNT_B_$INDEX.pdf"
+    echo "$COUNT_B"
+    if [ "$COUNT_B" -lt 10 ] ; then
+      weasyprint "$LINE_B" "$COUNT_B-$INDEX.pdf"
+    else
+      if [ "$COUNT_B" -lt 20 ] ; then
+        weasyprint "$LINE_B" "A$COUNT_B-$INDEX.pdf"
+      else
+        weasyprint "$LINE_B" "B$COUNT_B-$INDEX.pdf"
+      fi
+    fi
     
     COUNT_B=`expr $COUNT_B + 1`
   done < "url_article_$INDEX.txt"
@@ -130,28 +140,3 @@ while read LINE_A; do
 done < "url_of_issues.txt"
 
 echo "Et voilà!"
-
-
-
-# TO DO : Change the way the temporary file are working
-# echo "Next step : edit the file 'list_url.txt' to remove unwanted urls (first and two lasts generally)"
-# echo "Press Enter to continue…"
-# read CONTINUE
-# 
-# 
-#   if [ -z "$LINE_B" ]
-#   then
-#   	echo "All fragments have been downloaded!"
-#   else
-#     echo "Downloading : $LINEB …"
-#     
-#     if [ $COUNTB -lt 10 ]
-#     then
-#       weasyprint "$LINEB" "$COUNTB.pdf"
-#     elif [ $COUNTB -lt 20 ]
-#       weasyprint "$LINEB" "A$COUNTB.pdf"
-#     else
-#       weasyprint "$LINEB" "B$COUNTB.pdf"
-#     fi
-#     
-#   fi
