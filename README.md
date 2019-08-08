@@ -1,7 +1,17 @@
 # LinuxJournalRipper
+## Why?
 **On August 7, 2019 Linux Journal shut its doors for good.** The website is partially unprotected (no paywall now for the HTML version of Linux Journal, but still paywalled for PDF/ePub/Mobi) but **the website will be also shut down in a near future.** This is an *emergency script make to download the 131 first (and old) issues of Linux Journal in PDF !*
 
-Other issues are available online, in grey part of the internet, hence they have not disappear for now. The script is also able to download everything up to August 2019, it will be long, but it's possible, just edit the source code.
+## I want everything (including recent LJ issues)?
+Other issues are available onlinein better quality, into the grey part of the internet, hence they have not disappear for now. The script still able do download them, you could modify this script to download everything up to August 2019, it will be long, but it's possible, just edit the source code.
+To do so, you must suppress these lines of codes:
+```
+#Suppress numerous line until we have only from issue 1 to 131
+#We have PDF in better quality for issues >=132.
+tail -n +171 url_of_issues.txt > tmp.txt
+mv tmp.txt url_of_issues.txt
+```
+This is the grey part of the internet : https://drive.google.com/open?id=1FuU1N7tGNb-gDfrs5In_sqyPCwZ6FE2p
 
 # What does this script?
 This script :
