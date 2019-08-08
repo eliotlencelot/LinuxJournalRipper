@@ -40,22 +40,24 @@ Any GNU/Linux users might smoothly run this script if (s)he has the following pr
 ```
 apt-get update
 apt-get install lynx
+sudo apt-get install imagemagick
 sudo apt-get install build-essential python3-dev python3-pip python3-setuptools python3-wheel python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
 pip3 install WeasyPrint
 ```
 - Fedora :
 ```
-sudo yum install redhat-rpm-config python-devel python-pip python-setuptools python-wheel python-cffi libffi-devel cairo pango gdk-pixbuf2
+sudo yum install redhat-rpm-config python-devel python-pip python-setuptools python-wheel python-cffi libffi-devel cairo pango gdk-pixbuf2 lynx
+yum install ImageMagick
 pip3 install WeasyPrint
 ```
 - ArchLinux :
 ```
-sudo pacman -S python-pip python-setuptools python-wheel cairo pango gdk-pixbuf2 libffi pkg-config
+sudo pacman -S python-pip python-setuptools python-wheel cairo pango gdk-pixbuf2 libffi pkg-config lynx imagemagick
 pip3 install WeasyPrint
 ```
 - Gentoo :
 ```
-emerge pip setuptools wheel cairo pango gdk-pixbuf cffi
+emerge pip setuptools wheel cairo pango gdk-pixbuf cffi lynx imagemagick
 pip3 install WeasyPrint
 ```
 
@@ -64,7 +66,9 @@ pip3 install WeasyPrint
 
 
 # Usage
-Just run the script in the terminal `./LJ-ripper.sh`
+1) Download `LJ-ripper.sh` from github.
+2) Open a Terminal and run the script with `./LJ-ripper.sh`
+
 Please run this on a directory with enough free space (1.5 GB, I think).
 Numerous temporary files will be written (> 2700 temporary files).
 
