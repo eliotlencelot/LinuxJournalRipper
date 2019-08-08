@@ -5,7 +5,7 @@
 ## I want everything (including recent LJ issues)?
 Other issues are available onlinein better quality, into the grey part of the internet, hence they have not disappear for now. The script still able do download them, you could modify this script to download everything up to August 2019, it will be long, but it's possible, just edit the source code.
 To do so, you must suppress these lines of codes:
-```
+```bash
 #Suppress numerous line until we have only from issue 1 to 131
 #We have PDF in better quality for issues >=132.
 tail -n +171 url_of_issues.txt > tmp.txt
@@ -26,7 +26,7 @@ This script should run well under macOS, FreeBSD and GNU/Linux.
 
 For macOS : run this script in a Terminal to ensure you have everything for the program to run.
 Any macOS or BSD users might smoothly run this script if (s)he has the following programs : lynx, weasyprint, imagemagick and the GNU version of head (ghead).
-```
+```bash
 if test ! $(which brew)
 then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -47,7 +47,7 @@ For Linux users : run these commands in a Terminal.
 Any GNU/Linux users might smoothly run this script if (s)he has the following programs : lynx, weasyprint and imagemagick.
 
 - Debian based (Debian 9.0 Stretch or newer, Ubuntu 16.04 Xenial or newer) :
-```
+```bash
 apt-get update
 apt-get install lynx
 sudo apt-get install imagemagick
@@ -55,18 +55,18 @@ sudo apt-get install build-essential python3-dev python3-pip python3-setuptools 
 pip3 install WeasyPrint
 ```
 - Fedora :
-```
+```bash
 sudo yum install redhat-rpm-config python-devel python-pip python-setuptools python-wheel python-cffi libffi-devel cairo pango gdk-pixbuf2 lynx
 yum install ImageMagick
 pip3 install WeasyPrint
 ```
 - ArchLinux :
-```
+```bash
 sudo pacman -S python-pip python-setuptools python-wheel cairo pango gdk-pixbuf2 libffi pkg-config lynx imagemagick
 pip3 install WeasyPrint
 ```
 - Gentoo :
-```
+```bash
 emerge pip setuptools wheel cairo pango gdk-pixbuf cffi lynx imagemagick
 pip3 install WeasyPrint
 ```
