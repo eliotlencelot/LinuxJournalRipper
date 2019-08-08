@@ -10,7 +10,7 @@ macOS users must use GNU version of head (ghead).
 
 # Usage
 Just run the script in the terminal `./LJ-ripper.sh`
-Please run this on a directory with enough free space (3 GB, I think).
+Please run this on a directory with enough free space (1.5 GB, I think).
 Numerous temporary files will be written (> 2700 temporary files).
 
 eliotlencelot, 2019.
