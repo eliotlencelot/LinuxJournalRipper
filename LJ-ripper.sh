@@ -58,7 +58,11 @@ tail -n +3 url_of_issues.txt > tmp.txt
 mv tmp.txt url_of_issues.txt
 
 #Suppress the two last lines : no interest
-ghead -n -2 url_of_issues.txt > tmp.txt		#TODO : GNU/Linux user must replace ghead by head
+if [ "$(uname)" == "Darwin" ]; then
+  ghead -n -2 url_of_issues.txt > tmp.txt	   
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  head -n -2 url_of_issues.txt > tmp.txt
+fi
 mv tmp.txt url_of_issues.txt
 
 #Suppress numerous line until we have only from issue 1 to 131
@@ -96,8 +100,12 @@ while read LINE_A; do
   mv tmp.txt url_article_$INDEX.txt
   
   #Suppress the two last lines : no interest
-  ghead -n -2 url_article_$INDEX.txt > tmp.txt		#TODO : GNU/Linux user must replace ghead by head
-  mv tmp.txt url_article_$INDEX.txt
+  #Suppress the two last lines : no interest
+  if [ "$(uname)" == "Darwin" ]; then
+    ghead -n -2 url_of_issues.txt > tmp.txt	   
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    head -n -2 url_of_issues.txt > tmp.txt
+  fi
   
   #Here we do most of the job for every article in each issue:
   COUNT_B=1
