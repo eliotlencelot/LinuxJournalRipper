@@ -1,5 +1,5 @@
 # LinuxJournalRipper
-TL;DR : These scripts made for Mac or Linux, can download every old issues of the Linux Journal into PDF.
+TL;DR : These scripts made for Mac or Linux, can download every old issues of the Linux Journal into PDF. Just download yours and run a command like `./LJ-ripper-....sh`.
 (c) eliotlencelot
 
 ## What is LinuxJournalRipper
@@ -88,7 +88,7 @@ echo "Everything should be installed."
 
 #### GNU/Linux
 - Open a Terminal.
-- Run the corresponding script (hera after) in a Terminal.
+- Run the corresponding script (here after) in a Terminal.
 
 ##### Debian based (Debian 9.0 Stretch or newer, Ubuntu 16.04 Xenial or newer) :
 ```bash
