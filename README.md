@@ -1,4 +1,6 @@
 # LinuxJournalRipper
+TL;DR : These script for Mac or Linux download the old issues of the Linux Journal into PDF.
+
 ## Why?
 **On August 7, 2019 Linux Journal shut its doors for good.** The website is partially unprotected (no paywall now for the HTML version of Linux Journal, but still paywalled for PDF/ePub/Mobi) but **the website will be also shut down in a near future.** This is an *emergency script make to download the 131 first (and old) issues of Linux Journal in PDF !*
 
