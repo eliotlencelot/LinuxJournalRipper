@@ -26,7 +26,7 @@ echo "Everything should be installed."
 4) Run my script by typing `LJ-ripper-mac.sh` in a shell as usual.
 5) Quit the Terminal
 
-The script will run as soon as it is launched without asking you anything at anytime. Please run this on a directory with enough free space (1.5 GB, I think).
+The script will run as soon as it is launched without asking you anything at anytime. Please run this on a directory with enough free space (around 500 MB).
 Numerous temporary files will be written (> 2700 temporary files).
 
 eliotlencelot, 2019.
