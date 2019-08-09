@@ -122,8 +122,7 @@ You need to have Windows 10, on a 64 bit processor, build 16215 or later.
 - To find your PC's architecture and Windows build number, open **Settings > System > About** Look for the **OS Build** and **System Type** fields.
 - Follow this [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 - Do not forget to [initializing the newly installed distro](https://docs.microsoft.com/en-us/windows/wsl/initialize-distro)
-- (Download the script `LJ-ripper-OtherArch.sh` in the `Linux others` folder.)
-- Open a Terminal and run `./LJ-ripper-OtherArch.sh`
+- Follow 2) and 3) normally. For 2) choose`LJ-ripper-OtherArch.sh` in the `Linux others` folder.
 
 [Troubleshooting Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting)
 
