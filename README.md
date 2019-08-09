@@ -15,8 +15,16 @@ This script :
 5) put the whole thing in a "Linux Journal" folder with logs in a "Logbooks" folder.
 
 ## Which systems can run this script?
-This emergency script run in macOS, FreeBSD and most GNU/Linux distribution. It should also run in Cygwin.
+This (emergency) script run in :
+- macOS : Intel Mac, see the `Mac` folder.
+- FreeBSD : x86 or AMD64, see the `Mac` folder. (I Think, using the Mac script)
+- GNU/Linux : x86, see the `Linux 32` ; AMD64 see the `Linux 64` folder ; . It should also run in Cygwin.
 Took half a night on an Intel Core 2 Duo processor.
+
+## Licence of my script
+- My script use BSD-2 licence, see the LICENCE file.
+- Other tools are free and open-source : GNU Core Utilities, lynx, WeasyPrint and if needed ImageMagick. Their licence is open-source, see their website for more information, note that I did not modify their source code.
+- CPF is open-source but not FLOSS : code is accessible online, there are no fees for personal use, but there are fees for commercial use. It does also add a watermark. It is possible to replace CPDF by ImageMagick a project under Apache licence, by either replacing the `../cpdf *.pdf -o "Linux Journal - $INDEX.pdf"`command by `convert *.pdf "Linux Journal - $INDEX.pdf"` in the `LJ-ripper-[sth].sh`script for your plateform but the quality will be lessened ; or either on Linux, using the script from `Linux others`.
 
 # How to dump every issue of the Linux Journal :
 
@@ -39,7 +47,7 @@ This script should run well under macOS, FreeBSD and GNU/Linux.
 
 1) Install the dependencies by copy/pasting the following snippet of code into a Terminal.
 2) Download the whole project or just the folder associated to your OS.
-3) Run the `LJ-ripper.sh` script in a shell as usual
+3) Run the `LJ-ripper-[sth].sh` script in a shell as usual (replace [sth] by the right word).
 
 ## Dependencies
 *TODO : Change imagemagick to the new cpdf*
@@ -54,11 +62,11 @@ fi
 brew update
 
 brew install coreutils
-brew install python3 cairo pango gdk-pixbuf libffi imagemagick lynx
+brew install python3 cairo pango gdk-pixbuf libffi lynx
 pip3 install WeasyPrint
 
 brew update
-brew upgrade python3 cairo pango gdk-pixbuf libffi imagemagick lynx
+brew upgrade python3 cairo pango gdk-pixbuf libffi lynx
 
 echo "Everything should be installed."
 ```
@@ -96,7 +104,7 @@ pip3 install WeasyPrint
 - You could simply push the *Clone or download* button in the internet interface of GitHub button to get a zip with all the project, including the Mac OS X and Linux folder.
 
 ## Usage
-1) Open a Terminal and run the script with `./LJ-ripper.sh`
+1) Open a Terminal and run the script with `./LJ-ripper-[sth].sh` (replace [sth] by the right word).
 
 The script will run as soon as it is launched without asking you anything at anytime. Please run this on a directory with enough free space (1.5 GB, I think).
 Numerous temporary files will be written (> 2700 temporary files).
