@@ -93,7 +93,7 @@ pip3 install WeasyPrint
 
 ## Download the script
 - You could do a `git clone` on your computer.
-- You could simply push the *mater download* in the internet interface of GitHub button to get a zip with all the project, including the Mac OS X and Linux folder.
+- You could simply push the *Clone or download* button in the internet interface of GitHub button to get a zip with all the project, including the Mac OS X and Linux folder.
 
 ## Usage
 1) Open a Terminal and run the script with `./LJ-ripper.sh`
