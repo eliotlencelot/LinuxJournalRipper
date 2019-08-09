@@ -27,9 +27,9 @@ Took half a night on an Intel Core 2 Duo processor.
 
 ## License of my script
 ### My script are BSD-2:
-My script use BSD-2 license, see the LICENSE file.
+My script use BSD-2 "Simplified" license, see the LICENSE file.
 ### Dependencies licences:
-- GNU Core Utilities, lynx, WeasyPrint and if needed ImageMagick are all free and open-source tools. I did not modify their source code. Their license is respectively GPLv3, GPLv2, ? and Apache. See their website for more information.
+- GNU Core Utilities, lynx, WeasyPrint and if needed ImageMagick are all free and open-source tools. I did not modify their source code. Their license is respectively GPLv3, GPLv2, BSD-3 "Revised" and Apache. See their website for more information.
 - CPDF is open-source but not FLOSS : code is accessible online, there are no fees for personal use, but there are fees for commercial use. [License for CPDF is available here.](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE) It does also add a watermark.
 
 It is possible to replace the CPDF by ImageMagick a project under Apache license, but the quality will be lessened, by either :
