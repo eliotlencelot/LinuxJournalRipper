@@ -1,6 +1,7 @@
 # LinuxJournalRipper
-TL;DR : These scripts made for Mac or Linux, can download every old issues of the Linux Journal into PDF. Just download yours and run a command like `./LJ-ripper-....sh`.
-(c) eliotlencelot
+TL;DR : These scripts are made for Mac or Linux. They can download every old issues of the Linux Journal into PDF. To download old issues locally just run a command like `./LJ-ripper-....sh`.
+
+(c) eliotlencelot, 2019.
 
 ## What is LinuxJournalRipper
 It is a script available for Mac and Linux that download the 131 first issues of the Linux Journal in PDF.
@@ -20,10 +21,13 @@ This (emergency) script :
 
 ### Which systems can run this script?
 This (emergency) script run in :
-- macOS : Intel Mac, see the `Mac` folder for more information.
+- Apple macOS : Intel Mac, see the `Mac` folder for more information.
 - FreeBSD : x86 or AMD64, see the `Mac` folder for more information.
-- GNU/Linux : x86, see the `Linux 32 bits` folder for more information ; AMD64 see the `Linux 64 bits` folder for more information ;  other architechture as long as the dependecies exist ; Cygwin as long as the dependecies exist.
-Took half a night on an Intel Core 2 Duo processor.
+- GNU/Linux : x86, see the `Linux 32 bits` folder for more information ; AMD64 see the `Linux 64 bits` folder for more information ;  other architechture as long as the dependecies exist ;
+- Microsoft Windows : Should work with Cygwin or WSL as long as the dependecies exist.
+
+### How much time did it took?
+Took half a night on an old Intel Core 2 Duo processor with a gigabit connexion.
 
 ## License of my script
 ### My script are BSD-2:
@@ -136,4 +140,13 @@ You need to have Windows 10, on a 64 bit processor, build 16215 or later.
 The script will run as soon as it is launched without asking you anything at anytime. *TODO : Change this behavior* Please run this on a directory with enough free space (1.5 GB, I think).
 Numerous temporary files will be written (> 2700 temporary files).
 
-eliotlencelot, 2019.
+## Licence
+Copyright 2019 eliotlencelot
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
