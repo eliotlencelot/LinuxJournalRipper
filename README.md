@@ -1,12 +1,14 @@
 # LinuxJournalRipper
 TL;DR : These scripts are made for Mac or Linux. They can download every old issues of the Linux Journal into PDF. To download old issues locally just run a command like `./LJ-ripper-....sh`.
+One can freely use my scripts under BSD-2 clause licence.
 
 (c) eliotlencelot, 2019.
 
 ## What is LinuxJournalRipper
 It is a script available for Mac and Linux that download the 131 first issues of the Linux Journal in PDF.
 ### Why?
-**On August 7, 2019 Linux Journal shut its doors for good.** The website is *partially unprotected* (no paywall now for the HTML version of Linux Journal, but still paywalled for PDF/ePub/Mobi) but **the website will be also shut down in a near future.** This is an *emergency script make to download the 131 first (and old) issues of Linux Journal in PDF !*
+**On August 7, 2019 Linux Journal shut its doors for good.** The website is now mostly open for everyone, they have removed the paywall (as of 2019-08) for the HTML version of Linux Journal, but it is still paywalled for PDF/ePub/Mobi version.
+We, the people, fear that **the website will be also shut down in a near future**, as it represents a cost for a defunct company. Hence, this is an *emergency script make to download the 131 first issues of Linux Journal in PDF !*
 
 The generated PDF are portable, lightweight and without any advertisment (contrary to a scanned file from that era).
 
@@ -33,7 +35,7 @@ Took half a night on an old Intel Core 2 Duo processor with a gigabit connexion.
 ### My script are BSD-2:
 My script use BSD-2 "Simplified" license, see the LICENSE file.
 ### Dependencies licences:
-- GNU Core Utilities, lynx, WeasyPrint and if needed ImageMagick are all free and open-source tools. I did not modify their source code. Their license is respectively GPLv3, GPLv2, BSD-3 "Revised" and Apache. See their website for more information.
+- GNU Core Utilities, lynx, WeasyPrint and if needed ImageMagick are all free and open-source tools. I did not modify their source code, I just call them. Their license is respectively GPLv3, GPLv2, BSD-3 "Revised" and Apache. See their website for more information.
 - CPDF is open-source but not FLOSS : code is accessible online, there are no fees for personal use, but there are fees for commercial use. [License for CPDF is available here.](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE) It does also add a watermark.
 
 It is possible to replace the CPDF by ImageMagick a project under Apache license, but the quality will be lessened, by either :
@@ -42,7 +44,7 @@ It is possible to replace the CPDF by ImageMagick a project under Apache license
 
 ## How to dump every issue of the Linux Journal :
 
-### Everything in the better quality possible
+### Everything in the better quality possible but with ads
 1) Download issues from n°301 (2019-08) to n°132 (2005-04) in official publication PDF here : https://drive.google.com/open?id=1FuU1N7tGNb-gDfrs5In_sqyPCwZ6FE2p (2274 MB if only n°301 to n°132, 3344 MB else)
 2) Run the script to get n°131 (2005-03) to n°1 (1994-04) in generated PDF. (287 MB)
 
